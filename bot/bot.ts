@@ -29,7 +29,7 @@ bot.on('contact', async (msg) => {
   const telegramId = msg.from!.id;
 
   // SEND TO NEXT.JS BACKEND
-  await fetch(`${process.env.API_URL}/api/telegram/save-user`, {
+  await fetch(`/api/telegram/save-user`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
